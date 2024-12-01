@@ -1,0 +1,90 @@
+/* General styles */
+body {
+    background-image: url(airpods\ back1.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive image */
+img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;  /* Ensure images scale down with smaller screens */
+    height: auto;     /* Maintain aspect ratio */
+}
+
+/* Price styles */
+.price1 {
+    font-weight: bolder;
+    color: rgb(212, 124, 7);
+    font-size: large;
+    text-decoration: line-through;
+}
+
+.price11 {
+    display: flex;
+    color: rgb(6, 253, 39);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.price11 span {
+    display: inline-block;
+    animation: bounce 0.6s ease infinite;
+}
+
+.price11 span:nth-child(1) {
+    animation-delay: 0s;
+}
+.price11 span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.price11 span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.price11 span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.price11 span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    body {
+        background-size: contain;
+    }
+    .price11 {
+        font-size: 1.2rem;  /* Smaller font for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+    .price11 {
+        font-size: 1rem;  /* Even smaller font for small screens */
+        flex-direction: column;  /* Stack prices vertically on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .price11 {
+        font-size: 0.9rem;  /* Smallest font for extra small screens */
+    }
+}
